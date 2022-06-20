@@ -128,7 +128,7 @@ Execute CALLBACK to display candidates in sideline."
      :cancel-token :sideline-lsp-code-actions)))
 
 (defun sideline-lsp--code-actions (callback actions)
-  "Show code ACTIONS
+  "Show code ACTIONS.
 
 Execute CALLBACK to display candidates in sideline."
   (when sideline-lsp-actions-kind-regex
