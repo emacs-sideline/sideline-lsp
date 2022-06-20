@@ -6,7 +6,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/sideline-lsp
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "27.1") (lsp-mode "6.0") (dash "2.18.0") (ht "2.4"))
+;; Package-Requires: ((emacs "27.1") (sideline "0.1.0") (lsp-mode "6.0") (dash "2.18.0") (ht "2.4"))
 ;; Keywords: sideline lsp
 
 ;; This file is not part of GNU Emacs.
@@ -36,6 +36,7 @@
 (require 'dash)
 (require 'ht)
 (require 'lsp-mode)
+(require 'sideline)
 
 (defgroup sideline-lsp nil
   "Show lsp information with sideline."

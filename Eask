@@ -9,8 +9,10 @@
 
 (source "gnu")
 (source "melpa")
+(source "jcs-elpa")
 
 (depends-on "emacs" "27.1")
+(depends-on "sideline")
 (depends-on "lsp-mode")
 (depends-on "dash")
 (depends-on "ht")
