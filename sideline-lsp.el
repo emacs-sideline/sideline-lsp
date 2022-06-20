@@ -36,6 +36,7 @@
 (require 'dash)
 (require 'ht)
 (require 'lsp-mode)
+(require 's)
 (require 'sideline)
 
 (defgroup sideline-lsp nil

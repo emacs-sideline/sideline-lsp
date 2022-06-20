@@ -10,7 +10,9 @@ N/A
 
 ## 🔨 Quickstart
 
-N/A
+```elisp
+(setq sideline-backends-right '(sideline-lsp))
+```
 
 ## Contribute
 
