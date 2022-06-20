@@ -6,7 +6,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/jcs-elpa/sideline-lsp
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "27.1") (sideline "0.1.0") (lsp-mode "6.0") (dash "2.18.0") (ht "2.4"))
+;; Package-Requires: ((emacs "27.1") (sideline "0.1.0") (lsp-mode "6.0") (dash "2.18.0") (ht "2.4") (s "1.12.0"))
 ;; Keywords: sideline lsp
 
 ;; This file is not part of GNU Emacs.
@@ -128,12 +128,12 @@ Execute CALLBACK to display candidates in sideline."
              :context (list :diagnostics (sideline-lsp--line-diags (1- line-widen)))))
      (lambda (actions)
        (when (eq (current-buffer) buffer)
-         (sideline-lsp--code-actions callback actions bol eol)))
+         (sideline-lsp--code-actions callback actions)))
      :mode 'tick
      :cancel-token :sideline-lsp-code-actions)))
 
-(defun sideline-lsp--code-actions (callback actions bol eol)
-  "Show code ACTIONS with in BOL to EOL.
+(defun sideline-lsp--code-actions (callback actions)
+  "Show code ACTIONS
 
 Execute CALLBACK to display candidates in sideline."
   (when sideline-lsp-actions-kind-regex
