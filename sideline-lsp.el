@@ -96,7 +96,7 @@ Argument COMMAND is required in sideline backend."
                     (lsp--registered-capability "textDocument/codeAction")))
        (cons :async #'sideline-lsp--run)))
     (`action
-     (lambda (bound candidate &rest _)
+     (lambda (candidate &rest _)
        (funcall (ht-get sideline-lsp--ht-code-actions candidate))))))
 
 (defun sideline-lsp--line-diags (line)
