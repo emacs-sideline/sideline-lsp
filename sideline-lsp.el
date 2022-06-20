@@ -115,7 +115,6 @@ Execute CALLBACK to display candidates in sideline."
          (line-widen (or (and (buffer-narrowed-p) (save-restriction (widen) (line-number-at-pos)))
                          (line-number-at-pos)))
          (doc-id (lsp--text-document-identifier)))
-    (setq lsp-ui-sideline--last-line-number line-widen)
     (lsp-request-async
      "textDocument/codeAction"
      (-let (((start . end) (if (eq sideline-lsp-update-mode 'line)
