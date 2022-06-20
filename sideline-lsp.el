@@ -70,12 +70,7 @@ otherwise the actions will be updated when user changes current point."
   "Face used to highlight code action text."
   :group 'sideline-lsp)
 
-(defcustom sideline-lsp-actions-symbol "💡"
-  "Code action icon."
-  :type 'string
-  :group 'sideline-lsp)
-
-(defcustom sideline-lsp-code-actions-prefix ""
+(defcustom sideline-lsp-code-actions-prefix "💡 "
   "Prefix to insert before the code action title.
 This can be used to insert, for example, an unicode character: 💡"
   :type 'string
@@ -147,13 +142,12 @@ Execute CALLBACK to display candidates in sideline."
         ((title (->> (lsp:code-action-title action)
                      (replace-regexp-in-string "[\n\t ]+" " ")
                      (replace-regexp-in-string " " " ")
-                     (concat (unless sideline-lsp-actions-symbol
-                               sideline-lsp-code-actions-prefix))))
+                     (concat sideline-lsp-code-actions-prefix)))
          (code-action (lambda () (save-excursion (lsp-execute-code-action action))))
          (len (length title))
          (title (progn
                   (add-face-text-property 0 len 'sideline-lsp-code-action nil title)
-                  (concat sideline-lsp-actions-symbol " " title))))
+                  title)))
       (when (or (not sideline-lsp-ignore-duplicate)
                 (not (member title (ht-keys sideline-lsp--ht-code-actions))))
         (ht-set sideline-lsp--ht-code-actions title code-action))))

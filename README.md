@@ -6,13 +6,27 @@
 
 [![CI](https://github.com/jcs-elpa/sideline-flycheck/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/sideline-flycheck/actions/workflows/test.yml)
 
-N/A
+*P.S. The implementation is extracted and modified from [lsp-ui-sideline](https://github.com/emacs-lsp/lsp-ui#lsp-ui-sideline)
+'s code action*.
 
 ## 🔨 Quickstart
 
 ```elisp
-(setq sideline-backends-right '(sideline-lsp))
+(leaf sideline
+  :init
+  (setq sideline-backends-right '(sideline-lsp)))
+  
+(leaf lsp-mode :hook (lsp-mode-hook . sideline-mode))  ; enable it when lsp is on
 ```
+
+## 🔧 Customization
+
+* `sideline-lsp-update-mode` - When set to 'line' the information will be updated
+when user changes current line otherwise the information will be updated when
+user changes current point
+* `sideline-lsp-ignore-duplicate` - Ignore duplicate code actions
+* `sideline-lsp-code-action` - Face used to highlight code action text.
+* `sideline-lsp-code-actions-prefix` - Prefix to insert before the code action title.
 
 ## Contribute
 
