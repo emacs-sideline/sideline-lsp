@@ -91,8 +91,9 @@ This can be used to insert, for example, an unicode character: 💡"
 Argument COMMAND is required in sideline backend."
   (cl-case command
     (`candidates
-     (when (or (lsp--capability "codeActionProvider")
-               (lsp--registered-capability "textDocument/codeAction"))
+     (when (and (bound-and-true-p lsp-managed-mode)  ; check connection
+                (or (lsp--capability "codeActionProvider")
+                    (lsp--registered-capability "textDocument/codeAction")))
        (cons :async #'sideline-lsp--run)))
     (`action
      (lambda (bound candidate &rest _)
