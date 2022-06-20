@@ -53,6 +53,11 @@ otherwise the actions will be updated when user changes current point."
                  (const point))
   :group 'sideline-lsp)
 
+(defcustom sideline-lsp-ignore-duplicate nil
+  "Ignore duplicates when there is a same symbol with the same contents."
+  :type 'boolean
+  :group 'sideline-lsp)
+
 (defcustom sideline-lsp-actions-kind-regex "quickfix.*\\|refactor.*"
   "Regex for the code actions kinds to show in the sideline."
   :type 'string
@@ -148,7 +153,9 @@ Execute CALLBACK to display candidates in sideline."
          (title (progn
                   (add-face-text-property 0 len 'sideline-lsp-code-action nil title)
                   (concat sideline-lsp-actions-symbol " " title))))
-      (ht-set sideline-lsp--ht-code-actions title code-action)))
+      (when (or (not sideline-lsp-ignore-duplicate)
+                (not (member title (ht-keys sideline-lsp--ht-code-actions))))
+        (ht-set sideline-lsp--ht-code-actions title code-action))))
   (funcall callback (ht-keys sideline-lsp--ht-code-actions)))
 
 (provide 'sideline-lsp)
