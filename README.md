@@ -17,6 +17,7 @@
   (setq sideline-backends-right '(sideline-lsp)))
   
 (leaf lsp-mode :hook (lsp-mode-hook . sideline-mode))  ; enable it when lsp is on
+(leaf lsp-ui :init (setq lsp-ui-sideline-enable nil))  ; disable original sideline
 ```
 
 ## 🔧 Customization
