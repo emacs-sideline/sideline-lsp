@@ -4,7 +4,7 @@
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; URL: https://github.com/jcs-elpa/sideline-lsp
+;; URL: https://github.com/emacs-sideline/sideline-lsp
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1") (sideline "0.1.0") (lsp-mode "6.0") (dash "2.18.0") (ht "2.4") (s "1.12.0"))
 ;; Keywords: sideline lsp
@@ -43,7 +43,7 @@
   "Show lsp information with sideline."
   :prefix "sideline-lsp-"
   :group 'tool
-  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/sideline-lsp"))
+  :link '(url-link :tag "Repository" "https://github.com/emacs-sideline/sideline-lsp"))
 
 (defcustom sideline-lsp-update-mode 'point
   "Define the mode for updating sideline actions.
