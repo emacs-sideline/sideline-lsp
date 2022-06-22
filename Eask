@@ -2,7 +2,7 @@
          "0.1.0"
          "Show lsp information with sideline")
 
-(website-url "https://github.com/jcs-elpa/sideline-lsp")
+(website-url "https://github.com/emacs-sideline/sideline-lsp")
 (keywords "sideline" "lsp")
 
 (package-file "sideline-lsp.el")
