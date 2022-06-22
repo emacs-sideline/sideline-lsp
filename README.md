@@ -4,7 +4,7 @@
 # sideline-lsp
 > Show lsp information with sideline
 
-[![CI](https://github.com/jcs-elpa/sideline-flycheck/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/sideline-flycheck/actions/workflows/test.yml)
+[![CI](https://github.com/emacs-sideline/sideline-flycheck/actions/workflows/test.yml/badge.svg)](https://github.com/emacs-sideline/sideline-flycheck/actions/workflows/test.yml)
 
 *P.S. The implementation is extracted and modified from [lsp-ui-sideline](https://github.com/emacs-lsp/lsp-ui#lsp-ui-sideline)
 's code action*.
