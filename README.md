@@ -22,12 +22,17 @@
 
 ## 🔧 Customization
 
+#### 🧪 Variables
+
 * `sideline-lsp-update-mode` - When set to 'line' the information will be updated
 when user changes current line otherwise the information will be updated when
 user changes current point
 * `sideline-lsp-ignore-duplicate` - Ignore duplicate code actions
-* `sideline-lsp-code-action` - Face used to highlight code action text.
 * `sideline-lsp-code-actions-prefix` - Prefix to insert before the code action title.
+
+#### 🧪 Face
+
+* `sideline-lsp-code-action` - Face used to highlight code action text.
 
 ## Contribute
 
