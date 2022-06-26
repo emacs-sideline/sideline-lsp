@@ -3,7 +3,7 @@
          "Show lsp information with sideline")
 
 (website-url "https://github.com/emacs-sideline/sideline-lsp")
-(keywords "sideline" "lsp")
+(keywords "convenience" "lsp")
 
 (package-file "sideline-lsp.el")
 
