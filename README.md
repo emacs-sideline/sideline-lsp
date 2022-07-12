@@ -9,6 +9,19 @@
 *P.S. The implementation is extracted and modified from [lsp-ui-sideline](https://github.com/emacs-lsp/lsp-ui#lsp-ui-sideline)
 's code action*.
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [sideline-lsp](#sideline-lsp)
+    - [🔨 Quickstart](#🔨-quickstart)
+    - [🔧 Customization](#🔧-customization)
+        - [-](#-)
+        - [🧪 Face](#🧪-face)
+    - [💥 Replace `lsp-ui-sideline`](#💥-replace-lsp-ui-sideline)
+    - [Contribute](#contribute)
+
+<!-- markdown-toc end -->
+
 ## 🔨 Quickstart
 
 ```elisp
