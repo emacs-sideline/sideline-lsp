@@ -15,7 +15,7 @@
 - [sideline-lsp](#sideline-lsp)
     - [🔨 Quickstart](#🔨-quickstart)
     - [🔧 Customization](#🔧-customization)
-        - [-](#-)
+        - [🧪 Variables](#🧪-variables)
         - [🧪 Face](#🧪-face)
     - [💥 Replace `lsp-ui-sideline`](#💥-replace-lsp-ui-sideline)
     - [Contribute](#contribute)
