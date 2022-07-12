@@ -64,10 +64,6 @@ Hence, you should
 (setq sideline-backends-right '(sideline-lsp sideline-flycheck))
 ```
 
-> 📢️ Note
->
-> You should use `setq-local` if you want to customize it per buffer.
-
 ## Contribute
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
