@@ -34,6 +34,23 @@ user changes current point
 
 * `sideline-lsp-code-action` - Face used to highlight code action text.
 
+## 💥 Replace `lsp-ui-sideline`
+
+```elisp
+(setq lsp-ui-sideline-enable nil)  ; disable lsp-ui-sideline
+```
+
+Customize backends according to your options:
+
+* `lsp-ui-sideline-show-code-actions` - add `sideline-lsp`
+* `lsp-ui-sideline-show-diagnostics` - add `sideline-flycheck`
+
+Hence, you should
+
+```elisp
+(setq sideline-backends-right '(sideline-lsp sideline-flycheck))
+```
+
 ## Contribute
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
