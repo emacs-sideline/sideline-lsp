@@ -27,12 +27,12 @@
 ## 🔨 Quickstart
 
 ```elisp
-(leaf sideline
+(use-package sideline
   :init
   (setq sideline-backends-right '(sideline-lsp)))
   
-(leaf lsp-mode :hook (lsp-mode-hook . sideline-mode))  ; enable it when lsp is on
-(leaf lsp-ui :init (setq lsp-ui-sideline-enable nil))  ; disable original sideline
+(use-package lsp-mode :hook (lsp-mode . sideline-mode))  ; enable it when lsp is on
+(use-package lsp-ui :init (setq lsp-ui-sideline-enable nil))  ; disable original sideline
 ```
 
 ## 🔧 Customization
