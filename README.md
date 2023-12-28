@@ -6,7 +6,7 @@
 # sideline-lsp
 > Show lsp information with sideline
 
-[![CI](https://github.com/emacs-sideline/sideline-flycheck/actions/workflows/test.yml/badge.svg)](https://github.com/emacs-sideline/sideline-flycheck/actions/workflows/test.yml)
+[![CI](https://github.com/emacs-sideline/sideline-lsp/actions/workflows/test.yml/badge.svg)](https://github.com/emacs-sideline/sideline-lsp/actions/workflows/test.yml)
 
 ![demo](etc/demo.gif)
 
