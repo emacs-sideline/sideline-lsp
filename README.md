@@ -31,7 +31,7 @@
 ## 🔨 Quickstart
 
 ```elisp
-(use-package sideline
+(use-package sideline-lsp
   :init
   (setq sideline-backends-right '(sideline-lsp)))
   
