@@ -147,7 +147,9 @@ Execute CALLBACK to display candidates in sideline."
                                 (or (not kind?)
                                     (s-match sideline-lsp-actions-kind-regex kind?)))
                               actions)))
-  (ht-clear sideline-lsp--ht-code-actions)
+  (if sideline-lsp--ht-code-actions
+      (ht-clear sideline-lsp--ht-code-actions)
+    (setq sideline-lsp--ht-code-actions (ht-create)))
   (dolist (action actions)
     (-let*
         ((title (->> (lsp:code-action-title action)
