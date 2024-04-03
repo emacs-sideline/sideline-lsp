@@ -147,7 +147,7 @@ Execute CALLBACK to display candidates in sideline."
                                 (or (not kind?)
                                     (s-match sideline-lsp-actions-kind-regex kind?)))
                               actions)))
-  (setq sideline-lsp--ht-code-actions (ht-create))
+  (ht-clear sideline-lsp--ht-code-actions)
   (dolist (action actions)
     (-let*
         ((title (->> (lsp:code-action-title action)
@@ -162,6 +162,7 @@ Execute CALLBACK to display candidates in sideline."
       (when (or (not sideline-lsp-ignore-duplicate)
                 (not (member title (ht-keys sideline-lsp--ht-code-actions))))
         (ht-set sideline-lsp--ht-code-actions title code-action))))
+  (sideline-delete-backend-ovs 'sideline-lsp)
   (funcall callback (ht-keys sideline-lsp--ht-code-actions)))
 
 (provide 'sideline-lsp)
