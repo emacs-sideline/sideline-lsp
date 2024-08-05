@@ -3,6 +3,7 @@
 [![MELPA](https://melpa.org/packages/sideline-lsp-badge.svg)](https://melpa.org/#/sideline-lsp)
 [![MELPA Stable](https://stable.melpa.org/packages/sideline-lsp-badge.svg)](https://stable.melpa.org/#/sideline-lsp)
 
+<a href="#"><img align="right" src="https://raw.githubusercontent.com/emacs-sideline/sideline/master/etc/logo.png" width="20%"></a>
 # sideline-lsp
 > Show lsp information with sideline
 
