@@ -6,7 +6,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacs-sideline/sideline-lsp
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "27.1") (sideline "0.1.0") (lsp-mode "6.0") (dash "2.18.0") (ht "2.4") (s "1.12.0"))
+;; Package-Requires: ((emacs "28.1") (sideline "0.1.0") (lsp-mode "6.0") (dash "2.18.0") (ht "2.4") (s "1.12.0"))
 ;; Keywords: convenience lsp
 
 ;; This file is not part of GNU Emacs.
