@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "sideline-lsp"
          "0.1.0"
          "Show lsp information with sideline")
