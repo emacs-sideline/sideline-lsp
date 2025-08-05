@@ -151,6 +151,10 @@ Execute CALLBACK to display candidates in sideline."
      :mode 'tick
      :cancel-token :sideline-lsp-code-actions)))
 
+(defun sideline-lsp--code-action-icon (action)
+  "Get icon for a code action."
+  sideline-lsp-code-actions-prefix)
+
 (defun sideline-lsp--code-actions (callback actions)
   "Show code ACTIONS.
 
@@ -168,7 +172,7 @@ Execute CALLBACK to display candidates in sideline."
         ((title (->> (lsp:code-action-title action)
                      (replace-regexp-in-string "[\n\t ]+" " ")
                      (replace-regexp-in-string " " " ")
-                     (concat sideline-lsp-code-actions-prefix)))
+                     (concat (sideline-lsp--code-action-icon action))))
          (code-action (lambda () (save-excursion (lsp-execute-code-action action))))
          (len (length title))
          (title (progn
