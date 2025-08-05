@@ -152,7 +152,7 @@ Execute CALLBACK to display candidates in sideline."
      :cancel-token :sideline-lsp-code-actions)))
 
 (defun sideline-lsp--code-action-icon (action)
-  "Get icon for a code action."
+  "Get icon for a code ACTION."
   sideline-lsp-code-actions-prefix)
 
 (defun sideline-lsp--code-actions (callback actions)
